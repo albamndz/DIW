@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+    <title>Reservas - El Náutico</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/styles.css">
+
+    <script>
+        function mostrarMensaje(event) {
+            event.preventDefault();
+            alert("¡Mesa reservada con éxito!");
+        }
+    </script>
+</head>
+<body>
+    <nav>
+  <ul>
+    <li><a href="../restaurante.html">Inicio</a></li>
+    <li><a href="menu.html">Menú</a></li>
+    <li><a href="reservas.html">Reservas</a></li>
+    <li><a href="../restaurante.html#contacto">Contacto</a></li>
+  </ul>
+</nav>
+
+
+    <section id="reserva" class="reservas">
+        <h2>RESERVA TU MESA</h2>
+        <form action="#" method="post" onsubmit="mostrarMensaje(event)">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="fecha">Fecha:</label>
+            <input type="date" id="fecha" name="fecha" required>
+            
+            <label for="hora">Hora:</label>
+            <input type="time" id="hora" name="hora" required>
+            
+            <label for="personas">Número de personas:</label>
+            <input type="number" id="personas" name="personas" min="1" required>
+            
+            <label for="ubicacion">Ubicación de la mesa:</label>
+            <select id="ubicacion" name="ubicacion" required>
+                <option value="interior">Interior</option>
+                <option value="exterior">Exterior</option>
+            </select>
+            
+            <button type="submit" class="btn">Reservar</button>
+        </form>
+    </section>
+    <footer>
+        <p><a href="../restaurante.html">Volver a la página principal</a></p>
+    </footer>
+</body>
+</html>
