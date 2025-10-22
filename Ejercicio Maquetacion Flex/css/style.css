@@ -1,0 +1,120 @@
+/* Estilos generales */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background-color: #f5f5f5;
+}
+.pagina {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Hace que la página ocupe toda la pantalla */
+}
+
+/* Cabecera */
+.cabecera {
+    background-color: #2f3e46;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Para que los elementos bajen si no hay espacio */
+    padding: 10px 30px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 50px;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    background-color: #c44a2b;
+    padding: 10px 20px;
+    margin: 0;
+    transition: background 0.3s;
+}
+
+.menu a:hover {
+    background-color: #a83f22;
+}
+
+/* Contenido principal */
+.contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: white;
+    flex: 1; /* Hace que el contenido principal se expanda y empuje el footer al fondo */
+}
+
+.articulos {
+    flex: 3;
+    padding: 20px;
+}
+
+.articulos article {
+    margin-bottom: 20px;
+}
+
+.articulos h2 {
+    color: #222;
+}
+
+.lateral {
+    flex: 1;
+    background-color: #d77f2f;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.lateral img {
+    width: auto;          /* tamaño base */
+    height: auto;
+    object-fit: cover;     /* evita deformaciones */
+    border: 3px solid blue;
+    max-width: 100%;       /* que nunca sobrepase el ancho del contenedor */
+}
+
+
+/* Pie de página */
+.pie {
+    background-color: #2f3e46;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    flex-wrap: wrap;
+}
+
+
+.redes a img {
+    width: 25px;
+    margin-left: 10px;
+    transition: transform 0.2s;
+}
+
+.redes a img:hover {
+    transform: scale(1.2);
+}
