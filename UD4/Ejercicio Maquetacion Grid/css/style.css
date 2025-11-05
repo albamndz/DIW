@@ -1,0 +1,146 @@
+/* Estilos generales */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background-color: #e9eff3;
+}
+
+/* Rejilla principal */
+.pagina {
+    display: grid;
+
+    /* Definición de áreas */
+    grid-template-areas:
+        "cabecera cabecera"
+        "articulos lateral"
+        "pie pie";
+
+    /* Columnas: contenido y lateral */
+    grid-template-columns: 3fr 1fr;
+
+    /*  Filas: cabecera, contenido, pie */
+    grid-template-rows: auto 1fr auto;
+
+    width: 100%;
+    margin: 20px auto;
+    background-color: white;
+    min-height: 100vh;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border-radius: 10px;
+}
+
+/* CABECERA */
+    .cabecera {
+        grid-area: cabecera;
+        background-color: #1e3a8a;
+        color: white;
+        display: grid;
+        grid-template-columns: auto 1fr;
+        align-items: center;
+        padding: 15px 30px;
+        gap: 20px;
+    }
+
+    .logo {
+        display: grid;
+        grid-template-columns: auto auto;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .logo img {
+        width: 60px;
+    }
+
+    .menu {
+        display: grid;
+        grid-template-columns: repeat(4, auto);
+        justify-content: end;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .menu a {
+        color: white;
+        background-color: #2563eb;
+        padding: 20px 60px;
+        text-decoration: none;
+        transition: background 0.3s, transform 0.2s;
+    }
+
+    .menu a:hover {
+        background-color: #1d4ed8;
+        transform: scale(1.05);
+    }
+
+/* MAIN */
+    .contenedor {
+        display: contents;
+    }
+
+    .articulos {
+        grid-area: articulos;
+        padding: 20px;
+    }
+
+    .articulos article {
+        margin-bottom: 30px;
+        background-color: #f8fafc;
+        padding: 15px 20px;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+
+    .articulos h2 {
+        color: #1e3a8a;
+    }
+
+    .articulos p {
+        color: #374151;
+    }
+
+/* LATERAL */
+    .lateral {
+        grid-area: lateral;
+        background-color: #bfdbfe;
+        padding: 20px;
+        display: grid;
+        justify-items: center;
+        row-gap: 20px;
+    }
+
+    .lateral img {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+        border-radius: 15px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+/* PIE DE PÁGINA */
+    .pie {
+        grid-area: pie;
+        background-color: #1e3a8a;
+        color: white;
+        display: grid;
+        grid-template-columns: 1fr auto;
+        align-items: center;
+        padding: 15px 30px;
+        gap: 20px;
+    }
+
+    .redes {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        gap: 10px;
+    }
+
+    .redes img {
+        width: 25px;
+        border-radius: 5px;
+        transition: transform 0.2s;
+    }
+
+    .redes img:hover {
+        transform: scale(1.2);
+    }
