@@ -1,0 +1,94 @@
+/* Ajustes generales */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  text-align: center;
+  padding: 1.5em;
+}
+
+.grid {
+  display: grid;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.animal {
+  padding: 1rem;
+  border: 2px solid;
+  background-color: transparent;
+}
+
+/* Imágenes sin huecos */
+.animal img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+/* Hasta 576px (1 columna) */
+@media (max-width: 576px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .animal {
+    background-color: orange;
+    border-color: blue;
+  }
+  header h1 {
+    font-family: "Courier New", monospace;
+    color: blue;
+  }
+}
+
+/* Hasta 768px (2 columnas) */
+@media (min-width: 577px) and (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .animal {
+    background-color: blue;
+    border-color: green;
+  }
+  header h1 {
+    font-family: "Verdana", sans-serif;
+    color: white;
+  }
+}
+
+/* Hasta 992px (3 columnas) */
+@media (min-width: 769px) and (max-width: 992px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .animal {
+    background-color: green;
+    border-color: red;
+  }
+  header h1 {
+    font-family: "Georgia", serif;
+    color: yellow;
+  }
+}
+
+/* Desde 1200px (opcional) */
+@media (min-width: 1200px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .animal {
+    background-color: #f0f0f0;
+    border-color: black;
+  }
+  header h1 {
+    font-family: "Tahoma", sans-serif;
+    color: darkblue;
+  }
+}
