@@ -1,0 +1,351 @@
+/* ---------------------------------------------
+   RESET Y ESTILOS GENERALES
+--------------------------------------------- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: #f0f4f8;
+    color: #222;
+    line-height: 1.6;
+}
+
+/* ---------------------------------------------
+   CABECERA
+--------------------------------------------- */
+header {
+    background: #1c4a7e;
+    color: white;
+    padding: 15px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header h1 {
+    text-align: center;
+    font-size: 28px;
+    letter-spacing: 1px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+nav a {
+    padding: 8px 14px;
+    background: rgba(255,255,255,0.15);
+    border-radius: 6px;
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background: rgba(255,255,255,0.3);
+}
+
+/* ---------------------------------------------
+   SECCIONES
+--------------------------------------------- */
+section {
+    background: white;
+    padding: 40px 20px;
+    margin: 40px auto;
+    border-radius: 12px;
+    max-width: 1200px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h2 {
+    text-align: center;
+    color: #1c4a7e;
+    margin-bottom: 20px;
+}
+
+/* ---------------------------------------------
+   HERO / INICIO
+--------------------------------------------- */
+.hero {
+    background: url('../imagenes_video/lamuravela.jpg') no-repeat center/cover;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 0 20px;
+}
+
+.hero h2 {
+    font-size: 36px;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.5);
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 18px;
+    max-width: 600px;
+}
+
+/* ---------------------------------------------
+   HISTORIA
+--------------------------------------------- */
+.historia-flex {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.historia-texto {
+    flex: 1 1 300px;
+}
+
+.historia-texto p {
+    text-align: justify;
+    font-size: 16px;
+}
+
+#historia img {
+    flex: 1 1 300px;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* ---------------------------------------------
+   TRADICIONES (GRID)
+--------------------------------------------- */
+.trad-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap: 18px;
+}
+
+.trad-card {
+    padding: 20px;
+    background: #e5edf5;
+    border-radius: 10px;
+    border: 1px solid #cbd7e4;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.trad-card:hover {
+    transform: translateY(-5px);
+}
+
+.trad-card h3 {
+    margin-bottom: 10px;
+}
+
+/* ---------------------------------------------
+   GALERÍA (GRID)
+--------------------------------------------- */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+    gap: 15px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.03);
+}
+
+/* ---------------------------------------------
+   CONTACTO
+--------------------------------------------- */
+.contacto-flex {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.contacto-img img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.form-contacto {
+    flex: 1 1 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-contacto label {
+    margin: 10px 0 3px;
+}
+
+.form-contacto input,
+.form-contacto textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #aaa;
+    margin-bottom: 10px;
+}
+
+.form-contacto button {
+    padding: 12px;
+    background: #1c4a7e;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.form-contacto button:hover {
+    background: #2b6bb0;
+}
+
+/* ---------------------------------------------
+   REDES SOCIALES
+--------------------------------------------- */
+#redes {
+    text-align: center;
+    padding: 40px 0;
+    max-width: 800px;
+}
+
+.redes-flex {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.redes-flex a {
+    background: #004aad;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.redes-flex a:hover {
+    background: #003a8c;
+}
+
+/* ---------------------------------------------
+   PIE DE PÁGINA
+--------------------------------------------- */
+footer {
+    background: #1c4a7e;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* ---------------------------------------------
+   MEDIA QUERIES RESPONSIVE
+--------------------------------------------- */
+
+/* ---- MÓVILES ---- */
+@media (max-width: 573px) {
+
+    nav {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .trad-grid,
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contacto-flex,
+    .historia-flex {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contacto-img img,
+    #historia img {
+        max-width: 100%;
+    }
+
+    .redes-flex {
+        flex-direction: column;
+        gap: 10px;
+        width: 80%;
+        align-items: center;
+    }
+}
+
+/* ---- TABLET ---- */
+@media (min-width: 574px) and (max-width: 993px) {
+
+    .trad-grid,
+    .gallery-grid {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .contacto-flex,
+    .historia-flex {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #historia img {
+        max-width: 400px;
+    }
+
+    .contacto-img img {
+        max-width: 250px;
+    }
+
+    .redes-flex {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+}
+
+/* ---- ESCRITORIO ---- */
+@media (min-width: 994px) {
+
+    .trad-grid,
+    .gallery-grid {
+        grid-template-columns: repeat(3,1fr);
+    }
+
+    .contacto-flex,
+    .historia-flex {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    #historia img {
+        max-width: 500px;
+    }
+
+    .contacto-img img {
+        max-width: 300px;
+    }
+}

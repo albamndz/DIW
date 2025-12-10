@@ -1,0 +1,310 @@
+/* ---------------------------------------------
+   RESET Y ESTILOS GENERALES
+--------------------------------------------- */
+* {
+    box-sizing: border-box;
+    margin: 10px;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: #f0f4f8;
+    color: #222;
+    line-height: 1.5;
+}
+
+/* ---------------------------------------------
+   CABECERA 
+--------------------------------------------- */
+header {
+    background: #1c4a7e;
+    color: white;
+    padding: 10px 20px;
+    position: relative;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header h1 {
+    text-align: left;
+    font-size: 28px;
+    letter-spacing: 1px;
+    margin-left: 80px;
+}
+/*navegacion alineada a la derecha*/
+nav {
+    display: flex;
+    justify-content: flex-end;
+    gap: 5px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+nav a {
+    padding: 5px 10px;
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+
+nav a:hover {
+    background: rgba(255,255,255,0.3);
+}
+
+/* ---------------------------------------------
+   LOGO CABECERA   (a la izquierada del título)
+--------------------------------------------- */
+header img {
+    height: 60px;
+    position: absolute;
+    left: 20px;
+    top: 10px;
+}
+
+/* ---------------------------------------------
+   SECCIONES
+--------------------------------------------- */
+section {
+    background: white;
+    padding: 20px 10px;
+    margin: auto;
+    border-radius: 12px;
+    max-width: auto;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+
+/* ---------------------------------------------
+   INICIO 
+--------------------------------------------- */
+#inicio {
+    background: #f0f4f8;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+#inicio img {
+    width: 100%;
+    height: 500px;
+    max-width: auto;
+    display: block;
+    margin: 0 auto 20px auto;
+    object-fit: cover;
+}
+#inicio p {
+    text-align: justify;
+    font-size: 18px;
+    max-width: auto;
+    margin: 0 auto;
+}
+
+/* ---------------------------------------------
+   GALERÍA
+--------------------------------------------- */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px,1fr));
+    gap: 10px;
+}
+.gallery img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* ---------------------------------------------
+   FIESTAS CALLEJERAS (NO USAR GRID)
+--------------------------------------------- */
+.fiestas {
+  display: flex;
+  gap: 10px;
+  align-items: stretch;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: auto;
+  margin: 0 0;
+  padding: 0 10px;
+}
+
+.fiestas-card {
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  padding: 18px;
+  flex: 1 1 48%;
+  display: flex;
+  flex-direction: column;
+}
+
+.fiestas-card img {
+  width: auto;
+  height: 350px;
+  object-fit: cover; 
+  border-radius: 8px;
+  margin-bottom: 12px;
+  display: block; 
+  margin-right: 10px;
+}
+
+
+/* ---------------------------------------------
+   CRISTO REDENTOR (FLEX) (texto a la izquierda y imagen a la derecha pequeña)
+--------------------------------------------- */
+.cristo-flex {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.cristo-flex p {
+    flex: 1 1 300px;
+    text-align: justify;
+    font-size: 16px;
+}
+.cristo-img {
+    flex: 1 1 300px;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.cristo-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* ---------------------------------------------
+   PIE DE PÁGINA
+--------------------------------------------- */
+footer {
+    background: #1c4a7e;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.redes-flex {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 10px;
+}
+.redes-flex img {
+    width: 40px;
+    height: 40px;
+}
+
+
+
+/* ---------------------------------------------
+   MEDIA QUERIES RESPONSIVE
+--------------------------------------------- */
+
+/* ---- MÓVILES ---- */
+@media (max-width: 573px) {
+    nav {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .fiestas {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .fiestas-card {
+        flex: 1 1 100%;
+    }
+
+     .cristo-flex {
+        display: flex;
+        flex-direction: column; 
+        align-items: center;
+        gap: 16px;
+    }
+
+    .cristo-img {
+        order: -1;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .cristo-flex p {
+        order: 0;
+        width: 100%;
+    }
+}
+
+
+/* ---- TABLET (galeria 2 columas e img del cristo a la izquierda y texto a la derecha---- */
+@media (min-width: 574px) and (max-width: 993px) {
+    .gallery {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .cristo-flex {
+        flex-direction: row; 
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .cristo-img {
+        order: 0;
+        flex: 0 0 20%; 
+        max-width: 400px;
+    }
+
+    .cristo-flex p {
+        flex: 1 1 55%;
+        order: 1;
+    }
+
+    .fiestas {
+  display: flex;
+  gap: 10px;
+  align-items: stretch;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 993px;
+  margin: 0 0;
+  padding: 0 10px;
+}
+
+.fiestas-card {
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  padding: 18px;
+  flex: 1 1 48%;
+  display: flex;
+  flex-direction: column;
+  max-width: 480px;
+}
+
+.fiestas-card img {
+  width: auto;
+  height: 350px;
+  object-fit: cover; 
+  border-radius: 8px;
+  margin-bottom: 12px;
+  display: block; 
+  margin-right: 10px;
+}
+
+
+
+
+}
+
